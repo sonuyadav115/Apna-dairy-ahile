@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+
+
+</html><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudha Dairy Clone</title>
+    <title>Apna Dairy Clone</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -13,21 +16,25 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         header {
             background: #007bff;
             color: #fff;
             padding: 15px 0;
         }
+
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
+
         header h1 {
             font-size: 24px;
             margin: 0;
         }
+
         header nav ul {
             list-style: none;
             display: flex;
@@ -35,38 +42,46 @@
             margin: 0;
             padding: 0;
         }
+
         header nav ul li {
             display: inline;
         }
+
         header nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 16px;
         }
+
         .banner {
             text-align: center;
             padding: 50px 20px;
             background: linear-gradient(to bottom, #007bff, #0056b3);
             color: #fff;
         }
+
         .banner h2 {
             font-size: 36px;
             margin-bottom: 10px;
         }
+
         .banner p {
             font-size: 18px;
             margin: 0;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
+
         .product {
             background: #fff;
             border: 1px solid #ddd;
@@ -76,21 +91,26 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
+
         .product:hover {
             transform: scale(1.05);
         }
+
         .product img {
             max-width: 100%;
             border-radius: 5px;
         }
+
         .product h3 {
             font-size: 20px;
             margin: 10px 0;
         }
+
         .product p {
             font-size: 16px;
             color: #666;
         }
+
         .product button {
             background: #007bff;
             color: #fff;
@@ -100,13 +120,15 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         .product button:hover {
             background: #0056b3;
         }
+
         footer {
             text-align: center;
             padding: 15px;
-            background: #007bff;
+            background: #327ece;
             color: #fff;
         }
 
@@ -124,6 +146,7 @@
             background-color: rgb(0, 0, 0);
             background-color: rgba(0, 0, 0, 0.4);
         }
+
         .modal-content {
             background-color: #fefefe;
             margin: 5% auto;
@@ -132,12 +155,14 @@
             width: 80%;
             border-radius: 5px;
         }
+
         .close {
             color: #aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
+
         .close:hover,
         .close:focus {
             color: black;
@@ -146,11 +171,12 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
         <div class="container">
-            <h1>Sudha Dairy AHILE</h1>
+            <h1>Apna Dairy AHILE</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -174,57 +200,140 @@
     <section id="products" class="container">
         <h2>Our Products</h2>
         <div class="product-list">
-            <div class="product">
-                <img src="milk.png" alt="Sudha Milk">
-                <h3>Sudha Milk</h3>
-                <p>Price: ₹50/L</p>
-                <button onclick="showDetails('Sudha Milk', 'Vitamin A, D', '3.5g', '1L', 'Great for drinking, cooking, and making desserts.')">More Details</button>
-            </div>
-            <div class="product">
-                <img src="butter.png" alt="Sudha Butter">
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+    <img src="milk.png" alt="Sudha Milk" style="height: 250px; object-fit:contain;">
+
+    <h3>Sudha Milk</h3>
+    <p>Price: ₹50/L</p>
+
+    <button onclick="showDetails('Sudha Milk', 'Vitamin A, D', '3.5g', '1L', 'Great for drinking, cooking, and making desserts.')">
+        More Details
+    </button>
+
+    <button onclick="orderNow('Sudha Milk','₹50/L')">
+        Order Now
+    </button>
+
+</div>
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="butter.png" alt="Sudha Butter" style="height: 180px; object-fit:contain;">
+
                 <h3>Sudha Butter</h3>
                 <p>Price: ₹100/200g</p>
-                <button onclick="showDetails('Sudha Butter', 'Vitamin A', '81g', '200g', 'Perfect for baking, spreading, and cooking.')">More Details</button>
+
+                <button
+                    onclick="showDetails('Sudha Butter', 'Vitamin A', '81g', '200g', 'Perfect for baking, spreading, and cooking.')">More
+                    Details</button>
+
+                <button onclick="orderNow('Sudha Butter','₹100/200g')">Order Now</button>
+
             </div>
-            <div class="product">
-                <img src="balusahi.png" alt="Sudha Balushahi">
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="balusahi.png" alt="Sudha Balushahi" style="height:180px; object-fit:contain;">
+
                 <h3>Sudha Balushahi</h3>
                 <p>Price: ₹120/250g</p>
-                <button onclick="showDetails('Sudha Balushahi', 'Sugar, Ghee', '15g', '250g', 'Delicious traditional sweet, crispy on the outside and soft inside.')">More Details</button>
+
+                <button
+                    onclick="showDetails('Sudha Balushahi', 'Sugar, Ghee', '15g', '250g', 'Delicious traditional sweet, crispy on the outside and soft inside.')">More
+                    Details</button>
+
+                <button onclick="orderNow('Sudha Balushahi','₹120/250g')">Order Now</button>
+
             </div>
-            <div class="product">
-                <img src="dahi.png" alt="Sudha Dahi">
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="dahi.png" alt="Sudha Dahi" style="height:180px; object-fit:contain;">
+
                 <h3>Sudha Dahi</h3>
-                <p>Price: ₹40/500g</p>
-                <button onclick="showDetails('Sudha Dahi', 'Probiotics', '4g', '500g', 'Creamy, delicious, and full of probiotics for good digestion.')">More Details</button>
+                <p>Price: ₹50/500g</p>
+
+                <button
+                    onclick="showDetails('Sudha Dahi', 'Probiotics', '4g', '500g', 'Creamy, delicious, and full of probiotics for good digestion.')">More
+                    Details</button>
+
+                <button onclick="orderNow('Sudha Dahi','₹50/500g')">Order Now</button>
+
             </div>
-            <div class="product">
-                <img src="rasgulla.png" alt="Sudha Rassogulla">
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="rasgulla.png" alt="Sudha Rassogulla" style="height:180px; object-fit:contain;">
+
                 <h3>Sudha Rassogulla</h3>
                 <p>Price: ₹180/500g</p>
-                <button onclick="showDetails('Sudha Rassogulla', 'Sugar, Milk', '5g', '500g', 'Soft, spongy, and sweet. A traditional Bengali dessert.')">More Details</button>
+                <button onclick="showDetails('Sudha Rassogulla', 'Sugar, Milk', '5g', '500g', 'Soft and sweet')">More
+                    Details</button>
+                <button onclick="orderNow('Sudha Rassogulla','₹180/500g')">Order Now</button>
             </div>
-            <!-- Additional 3 Products -->
-            <div class="product">
-                <img src="panir.png" alt="Sudha Paneer">
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="panir.png" alt="Sudha Paneer" style="height:180px; object-fit:contain;">
+
                 <h3>Sudha Paneer</h3>
                 <p>Price: ₹150/200g</p>
-                <button onclick="showDetails('Sudha Paneer', 'Protein, Calcium', '12g', '200g', 'Soft and fresh paneer, great for cooking.')">More Details</button>
+
+                <button
+                    onclick="showDetails('Sudha Paneer', 'Protein, Calcium', '12g', '200g', 'Soft and fresh paneer, great for cooking.')">More
+                    Details</button>
+
+                <button onclick="orderNow('Sudha Paneer','₹150/200g')">Order Now</button>
+
             </div>
-            <div class="product">
-                <img src="cheeg.png" alt="Sudha Cheese">
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+                <img src="cheeg.png" alt="Sudha Cheese" style="height:180px; object-fit:contain;">
+
                 <h3>Sudha Cheese</h3>
                 <p>Price: ₹250/200g</p>
-                <button onclick="showDetails('Sudha Cheese', 'Calcium, Vitamin D', '25g', '200g', 'Perfect for sandwiches, pizzas, and snacks.')">More Details</button>
+
+                <button
+                    onclick="showDetails('Sudha Cheese', 'Calcium, Vitamin D', '25g', '200g', 'Perfect for sandwiches, pizzas, and snacks.')">More
+                    Details</button>
+
+                <button onclick="orderNow('Sudha Cheese','₹250/200g')">Order Now</button>
+
             </div>
-            <div class="product">
-                <img src="lassi.png" alt="Sudha Lassi">
-                <h3>Sudha Lassi</h3>
-                <p>Price: ₹60/500ml</p>
-                <button onclick="showDetails('Sudha Lassi', 'Probiotics, Calcium', '8g', '500ml', 'A refreshing drink, great for digestion and summer.')">More Details</button>
-            </div>
+
+            <div class="product" style="display:flex; flex-direction:column; justify-content:space-between;">
+
+    <img src="lassi.png" alt="Sudha Lassi" 
+    style="height: 250px;object-fit:contain; margin-bottom:10px;">
+
+    <h3 style="margin-top:5px;">Sudha Lassi</h3>
+
+    <p style="margin:5px 0;">Price: ₹60/500ml</p>
+
+    <button style="margin-top:auto;" onclick="showDetails('Sudha Lassi', 'Probiotics, Calcium', '8g', '500ml', 'A refreshing drink, great for digestion and summer.')">
+        More Details
+    </button>
+
+    <button onclick="orderNow('Sudha Lassi','₹60/500ml')">
+        Order Now
+    </button>
+
+</div>
+
         </div>
     </section>
+
+    <!-- ADD THIS FUNCTION BELOW YOUR SCRIPT -->
+    <script>
+        function orderNow(name, price) {
+            let message = `Hello, I want to order ${name} (${price})`;
+            let phone = "917903551417";
+            let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
 
     <!-- Contact Section -->
     <section id="contact" class="container">
@@ -235,7 +344,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Sudha Dairy Clone. All rights reserved.</p>
+        <p>© 2026 Apna Dairy Clone. All rights reserved.</p>
     </footer>
 
     <!-- Modal for More Details -->
@@ -265,15 +374,16 @@
             modal.style.display = "block";
         }
 
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = "none";
         }
 
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
     </script>
 </body>
+
 </html>

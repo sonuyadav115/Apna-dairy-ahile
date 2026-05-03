@@ -11,14 +11,17 @@
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #f5f5f0;
+            color: #2f3c45;
         }
 
         header {
-            background: #007bff;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(135deg, #2f6a7f 0%, #5a9fa8 100%);
             color: #fff;
-            padding: 15px 0;
+            padding: 18px 0;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         header .container {
@@ -29,49 +32,85 @@
         }
 
         header h1 {
-            font-size: 24px;
+            font-size: 26px;
             margin: 0;
+            letter-spacing: 1px;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         header nav ul {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 12px;
             margin: 0;
             padding: 0;
         }
 
         header nav ul li {
-            display: inline;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            padding: 10px 16px;
+            transition: all 0.3s ease;
+        }
+
+        header nav ul li:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #fff;
         }
 
         header nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 16px;
+            transition: opacity 0.2s ease;
+            font-family: 'Courier New', Courier, monospace;
+            display: block;
+        }
+
+        header nav ul li a:hover {
+            opacity: 1;
         }
 
         .banner {
             text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(to bottom, #007bff, #0056b3);
-            color: #fff;
+            padding: 0;
+            background: #f7faf7;
+            border-bottom: 1px solid #dbe5dc;
+            overflow: hidden;
         }
 
-        .banner h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 18px;
-            margin: 0;
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+        }
+
+        #products h2 {
+            color: #1f4d2a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 34px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #products h2::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #3e7d53;
+            margin-top: 12px;
+            border-radius: 2px;
         }
 
         .product-list {
@@ -81,72 +120,141 @@
         }
 
         .product {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            background: #ffffff;
+            border: 1px solid #dde3e8;
+            border-radius: 18px;
             text-align: center;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            padding: 20px;
+            box-shadow: 0 12px 30px rgba(46, 76, 97, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Courier New', Courier, monospace;
         }
 
         .product:hover {
-            transform: scale(1.05);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px rgba(46, 76, 97, 0.14);
         }
 
         .product img {
             max-width: 100%;
-            border-radius: 5px;
+            border-radius: 12px;
         }
 
         .product h3 {
             font-size: 20px;
-            margin: 10px 0;
+            margin: 14px 0 8px;
         }
 
         .product p {
             font-size: 16px;
-            color: #666;
+            color: #5f6d7c;
+            margin-bottom: 16px;
         }
 
         .product button {
-            background: #007bff;
+            background: #3e7d53;
             color: #fff;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 14px 28px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s;
-            margin: 8px 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 8px 8px;
             display: inline-block;
-
-            .product button {
-                background: #007bff;
-                color: #fff;
-                border: none;
-                padding: 10px;
-                border-radius: 20px;
-                cursor: pointer;
-                margin: 6px 0;
-                width: 100%;
-            }
-        }
-
-        .product button:last-child {
-            margin-left: 10px;
+            min-width: 140px;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .product button:hover {
-            background: #0056b3;
+            background: #2f5d3d;
+            transform: translateY(-1px);
+        }
+
+        #contact h2 {
+            color: #1f4d2a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 34px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #contact h2::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #3e7d53;
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-box {
+            background: #ffffff;
+            border: 2px solid #dbe5dc;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(46, 76, 97, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(46, 76, 97, 0.12);
+        }
+
+        .contact-box h3 {
+            color: #1f4d2a;
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-box p {
+            color: #5f6d7c;
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .contact-box a {
+            color: #3e7d53;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease;
+        }
+
+        .contact-box a:hover {
+            color: #2f5d3d;
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
-            padding: 15px;
-            background: #327ece;
+            padding: 28px 20px;
+            background: linear-gradient(135deg, #2f6a7f 0%, #5a9fa8 100%);
             color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            border-top: 3px solid #dbe5dc;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            letter-spacing: 0.3px;
         }
 
         /* Modal Styles */
@@ -165,56 +273,49 @@
         }
 
         .modal-content {
-            background-color: #fefefe;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f0 100%);
             margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
+            padding: 30px;
+            border: 2px solid #dbe5dc;
             width: 80%;
-            border-radius: 5px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .modal-content h3 {
+            color: #1f4d2a;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #5f6d7c;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .modal-content strong {
+            color: #2f3c45;
         }
 
         .close {
-            color: #aaa;
+            color: #999;
             float: right;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         .close:hover,
         .close:focus {
-            color: black;
+            color: #2f5d3d;
             text-decoration: none;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header nav ul {
-                flex-direction: column;
-                gap: 10px;
-                margin-top: 10px;
-            }
-
-            .banner h2 {
-                font-size: 24px;
-            }
-
-            .banner p {
-                font-size: 14px;
-            }
-
-            .product-list {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                width: 90%;
-            }
+            transform: scale(1.2);
         }
 
         @media (max-width: 768px) {
@@ -226,20 +327,30 @@
             }
 
             header nav ul {
-                flex-direction: column;
-                gap: 10px;
-                margin-top: 10px;
+                flex-direction: row;
+                gap: 8px;
+                margin-top: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
             }
 
-            .banner h2 {
-                font-size: 22px;
-            }
-
-            .banner p {
+            header nav ul li {
+                padding: 8px 12px;
                 font-size: 14px;
+                border: 1.5px solid #fff;
+            }
+
+            #products h2,
+            #contact h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
             }
 
             .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -249,7 +360,7 @@
             }
 
             .modal-content {
-                width: 95%;
+                width: 90%;
             }
         }
     </style>
@@ -274,8 +385,7 @@
     <!-- Home Section -->
     <section id="home">
         <div class="banner">
-            <h2>Fresh & Pure Dairy Products</h2>
-            <p>Bringing the goodness of milk to your table.</p>
+            <img src="BANNER.png" alt="Apna Dairy Banner" class="banner-img">
         </div>
     </section>
 
@@ -422,13 +532,27 @@
     <!-- Contact Section -->
     <section id="contact" class="container">
         <h2>Contact Us</h2>
-        <p>Email: sonuyadav7903551417@gmail.com | Phone: 7903551417</p>
-        <p>Visit us at Ahile, Agiaon, Ara, Bihar.</p>
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>📧 Email</h3>
+                <p><a href="mailto:sonuyadav7903551417@gmail.com">sonuyadav7903551417@gmail.com</a></p>
+            </div>
+            <div class="contact-box">
+                <h3>📞 Phone</h3>
+                <p><a href="tel:+917903551417">+91 7903551417</a></p>
+            </div>
+            <div class="contact-box">
+                <h3>📍 Location</h3>
+                <p><a href="https://maps.app.goo.gl/uxEDWBGLuhSngatF9?g_st=awb" target="_blank">Ahile, Agiaon<br>Ara, Bihar<br>Click to open Map</a></p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Apna Dairy Ahile. All rights reserved.</p>
+        <p><strong>© 2026 APNA DAIRY AHILE</strong></p>
+        <p>Bringing Quality Dairy to Your Doorstep</p>
+        <p>Pure by Nature • Trusted by Families</p>
     </footer>
 
     <!-- Modal for More Details -->
